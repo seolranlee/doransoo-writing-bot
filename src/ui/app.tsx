@@ -1,13 +1,13 @@
-import { useState } from "react";
-import * as Networker from "monorepo-networker";
-import { NetworkMessages } from "@common/network/messages";
+import { useState } from 'react';
+import * as Networker from 'monorepo-networker';
+import { NetworkMessages } from '@common/network/messages';
 
-import ReactLogo from "@ui/assets/react.svg?component";
-import viteLogo from "@ui/assets/vite.svg?inline";
-import figmaLogo from "@ui/assets/figma.png";
+import ReactLogo from '@ui/assets/react.svg?component';
+import viteLogo from '@ui/assets/vite.svg?inline';
+import figmaLogo from '@ui/assets/figma.png';
 
-import { Button } from "@ui/components/Button";
-import "@ui/styles/main.scss";
+import { Button } from '@ui/components/Button';
+import '@ui/styles/main.scss';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -29,13 +29,11 @@ function App() {
       <h1>Figma + Vite + React</h1>
 
       <div className="card">
-        <Button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </Button>
+        <Button onClick={() => setCount((count) => count + 1)}>count is {count}</Button>
         <Button
           onClick={async () => {
             const response = await NetworkMessages.PING.request({});
-            console.log("Response:", response);
+            console.log('Response:', response);
           }}
           style={{ marginInlineStart: 10 }}
         >
